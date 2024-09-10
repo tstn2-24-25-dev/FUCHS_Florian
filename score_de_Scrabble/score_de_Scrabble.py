@@ -32,6 +32,6 @@ def score_Scrabble(chemin : str):
 
 
 
-score_Scrabble(input("entrer le chemins d'un fichier : "))
+score_Scrabble("score_de_Scrabble/test.txt")
 
         
