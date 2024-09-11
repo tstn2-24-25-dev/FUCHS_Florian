@@ -12,6 +12,7 @@ def Trivial_puorsuit(chemin:str):
         lst_couleur=["violet", "orange" , "jaune" , "vert" , "rose" , "bleu"]
         for lancer in range(len(lignes)):
             cj1=(cj1+int(lignes[lancer]))%6
+            # test pour verifier (tout les lancer étape par étape):
             # print(f"Lancer {lancer} : {lignes[lancer]} => {lst_couleur[cj1]}")
     print(lst_couleur[cj1])
 Trivial_puorsuit("./Trivial_poursuit/test")
