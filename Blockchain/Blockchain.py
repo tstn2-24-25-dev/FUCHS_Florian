@@ -1,26 +1,21 @@
-def recup_ocurence(lignes : str):
-    ocurence={}
+def parcour_ocurence(lignes : str, limit : int):
+    adds=""
     for i in lignes:
-        i=i.split(" ")
-        ocurence[i[0]] = int(i[1])
-    return ocurence
-
-def max_occurence(ocurence : dict):
-    maxi=max(ocurence.values())
-    maxs=""
-    for keys in ocurence.keys():
-        if ocurence[keys] == maxi:
-            maxs+=f"{keys} "
-    return maxs
-
-def inventaire(chemin : str):
+        adds+=add_occurence(i,limit)
+    return adds
+def add_occurence(i : list, limit : int):
+    i=i.split(" ")
+    if int(i[1]) >= limit:
+        return i[0]
+    else: 
+        return ""
+def blockchain(chemin : str):
     with open(chemin, 'r') as donne:
         lignes=donne.readlines()
         nb_prop=lignes.pop(0)
-        limit=nb_prop//2
+        limit=int(nb_prop)/2
         lignes.pop(0)
-        ocurence=recup_ocurence(lignes)
-
-        print(max_occurence(ocurence))
-inventaire("Blockchain\\input1.txt")
-inventaire("Blockchain\\input2.txt")
+        ocurence=parcour_ocurence(lignes,limit)
+        print(ocurence)
+blockchain("Blockchain\\input1.txt")
+blockchain("Blockchain\\input2.txt")
