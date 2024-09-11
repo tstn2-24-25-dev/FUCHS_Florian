@@ -13,7 +13,7 @@ def max_occurence(ocurence : dict):
    maxs=""
    for keys in ocurence.keys():
       if ocurence[keys] == maxi:
-         maxs+=f"{keys} {ocurence[keys]} "
+         maxs+=f"{keys} "
    return maxs
 
 def inventaire(chemin : str):
