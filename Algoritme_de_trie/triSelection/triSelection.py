@@ -2,7 +2,7 @@ def triSelection(tab:list)->list:
     '''
     Description : La fontion triSelection(tab) tri la liste tab en 
     utilisant la methode de trie par selection : 
-    À chaque étape, mettre le plus petit élément à la bonne position
+    a chaque etape, mettre le plus petit element a la bonne position
     Parametre : tab : list : IN/OUT
     Sorti : tab : list
     Precondition : tab doit être une list d'entier
@@ -14,13 +14,16 @@ def triSelection(tab:list)->list:
     else :
         assert type(tab[0])==int,"tab doit être une list d'entier"
     min=tab[-1]
-    tabclone=tab[:]
     for i in range(len(tab)):
-        min=tab[-1]
-        for e in tabclone:
-            if e<min:
-                min = e
-        tabclone.remove(min)
-        tab.remove(min)
+        minI=indiceMin(tab,i)
+        min=tab.pop(minI)
         tab.insert(i,min)
     return tab
+
+def indiceMin(tab : list, j : int)->int:
+    minI=j
+    for i in range(j,len(tab)):
+            if i<len(tab)-1:
+                if tab[i]<tab[minI]:
+                    minI = i
+    return minI
