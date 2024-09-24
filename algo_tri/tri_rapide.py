@@ -1,3 +1,4 @@
+from bogo_sort import bogo_sort
 def triRapide(tab:list)->list:
     '''
     Description : La fontion triInsertion(tab) tri la liste tab en 
@@ -12,8 +13,7 @@ def triRapide(tab:list)->list:
         return []
     else :
         assert type(tab[0])==int,"tab doit être une list d'entier ou vide"
-    return[1,2,3,4,5,6,7,8,10]
-
+    return bogo_sort(tab)
 
 def pivot(tab:list):
     pivot=tab[0]
