@@ -23,7 +23,6 @@ def triSelection(tab:list)->list:
 def indiceMin(tab : list, j : int)->int:
     minI=j
     for i in range(j,len(tab)):
-            if i<len(tab)-1:
                 if tab[i]<tab[minI]:
                     minI = i
     return minI

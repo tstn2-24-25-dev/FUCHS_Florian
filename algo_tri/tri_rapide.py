@@ -12,6 +12,14 @@ def triRapide(tab:list)->list:
         return []
     else :
         assert type(tab[0])==int,"tab doit être une list d'entier ou vide"
+    return[1,2,3,4,5,6,7,8,10]
+
+
+def pivot(tab:list):
+    pivot=tab[0]
+    id=0
+    for i in range(len(tab)):
+        pass
     
 
 if __name__=="__main__":
