@@ -12,3 +12,8 @@ def triRapide(tab:list)->list:
         return []
     else :
         assert type(tab[0])==int,"tab doit être une list d'entier ou vide"
+    
+
+if __name__=="__main__":
+    help(triRapide)
+    print(triRapide([4,8,2,10,1,9,7,6,3,5]))

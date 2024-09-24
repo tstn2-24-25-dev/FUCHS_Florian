@@ -27,3 +27,7 @@ def indiceMin(tab : list, j : int)->int:
                 if tab[i]<tab[minI]:
                     minI = i
     return minI
+
+if __name__=="__main__":
+    help(triSelection)
+    print(triSelection([4,8,2,10,1,9,7,6,3,5]))

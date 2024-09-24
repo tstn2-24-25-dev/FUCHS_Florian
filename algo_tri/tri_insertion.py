@@ -23,4 +23,6 @@ def triInsertion(tab:list)->list:
                     tab.insert(j,ele)
     return(tab)
 
-print(triInsertion([4,8,2,10,1,9,7,6,3,5]))
+if __name__=="__main__":
+    help(triInsertion)
+    print(triInsertion([4,8,2,10,1,9,7,6,3,5]))
