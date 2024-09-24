@@ -15,30 +15,20 @@ def triFusion(tab:list)->list:
     mid=len(tab)//2
     tab1=triFusion(tab[:mid])
     tab2=triFusion(tab[mid:])
-    print(f"tab : {tab} tab1 : {tab1}, tab2 : {tab2}, mid: {mid}, len {len(tab)}")
     return ranger(tab2,tab1)
 def ranger(tab1:list, tab2:list):
-    print(f"tab1 : {tab1}, tab2 : {tab2}")
     id=0
-    idp=1
-    print(f"len {len(tab1)}")
-    for i in range(len(tab1)+1):
-        print(f"i {i},{tab1[i]}")
+    len1=len(tab1)
+    for i in range(len(tab1)):
         e=tab1[i]
         for j in range(id,len(tab2)):
-            print(f"j {j},{tab2[j]}, id {id}, idp {idp}")
-            if i==len(tab1):
-                print("insert def")
-                print(tab1)
-                tab1.insert(i+idp,tab2[j])
-                print(tab1)
-                idp+=1
-                id=j+1
+            ajout=False
             if e>tab2[j]:
-                print("insert")
-                print(tab1)
                 tab1.insert(tab1.index(e),tab2[j])
-                print(tab1)
+                id=j+1
+                ajout=True
+            if i==len1-1 and not ajout:
+                tab1.insert(len(tab1),tab2[j])
                 id=j+1
     return tab1
 
